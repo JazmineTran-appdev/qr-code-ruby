@@ -4,7 +4,7 @@ p "What kind of QR code would you like to generate? "
 puts "\n1. Open a URL"
 puts "2. Join a wifi network"
 puts "3. Send a text message"
-puts "\nEnter the corresponding number to make a choice or enter '4' to exit.\n"
+puts "\nEnter the corresponding number to make a choice.\n"
 
 user_input = gets.chomp.to_i
 
@@ -29,6 +29,9 @@ elsif user_input == 3
   user_message = gets.chomp
 
   user_qr = "SMSTO:#{phone_number}:#{user_message}"
+
+else
+  p "Sorry, your input was not recognized, please try again."
 end
 
 puts "\nWhat would you like to call the PNG?\n"
