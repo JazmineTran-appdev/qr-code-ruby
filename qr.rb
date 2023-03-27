@@ -20,6 +20,15 @@ elsif user_input == 2
   wifi_pass = gets.chomp
 
   user_qr = "WIFI:T:WPA;S:#{wifi_name};P:#{wifi_pass};;"
+
+elsif user_input == 3
+  puts "\nWhat is the phone number you want to send a text to?\n"
+  phone_number = gets.chomp.to_i
+
+  puts "\nWhat's the text message you want to send to them?\n"
+  user_message = gets.chomp
+
+  user_qr = "SMSTO:#{phone_number}:#{user_message}"
 end
 
 puts "\nWhat would you like to call the PNG?\n"
